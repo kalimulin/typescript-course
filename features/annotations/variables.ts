@@ -1,10 +1,10 @@
-let oranges: number = 5;
-let speed: string = 'fast';
+let oranges = 5;
+let speed = 'fast';
 
-let hasDog: boolean = true;
+let hasDog = true;
 
-let nothing: null = null;
-let nothing1: undefined = undefined;
+let nothing = null;
+let nothing1 = undefined;
 
 // bult-in objects
 let now: Date = new Date();
@@ -24,3 +24,8 @@ let point: {x: number; y: number} = {
   x: 10,
   y: 20
 };
+
+// functions
+const logNumber: (i: number) => void = (i: number) => {
+  console.log(i);
+}
