@@ -34,3 +34,28 @@ let point: {x: number; y: number} = {
 const logNumber: (i: number) => void = (i: number) => {
   console.log(i);
 }
+
+// when use type annotations
+// 1) when function returns the 'any' type
+const json = '{"x": 10, "y": 20}';
+const coordinates: {x: number; y: number} = JSON.parse(json);
+console.log(coordinates);
+
+// 2) when we declare a variable on the line and initialize it later
+let words = ['one', 'two', 'three'];
+let isTwo: boolean;
+
+for (let i = 0; i < words.length; i++) {
+  if (words[i] === 'two') {
+    isTwo = true;
+  }
+}
+
+// 3) when variables whoes type can't be inferred
+let myNumbers = [-130, -31, 122];
+let positiveNumber: boolean | number = false;
+for (let i = 0; i < myNumbers.length; i++) {
+  if (myNumbers[i] > 0) {
+    positiveNumber = myNumbers[i];
+  }
+}
