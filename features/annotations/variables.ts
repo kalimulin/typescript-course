@@ -1,10 +1,15 @@
+// type inference (вывод типов) - typescript самостоятельно устанавливает  тип переменной
 let oranges = 5;
 let speed = 'fast';
 
 let hasDog = true;
 
-let nothing = null;
-let nothing1 = undefined;
+// type annotations (аннотации типов) - указываем тип переменной явно
+// успользуется  когда переменная инициализируется не в момент объявления,
+// когда вывод о типе переменной не может быть сделан автоматически
+// когда функция возвращает any и нам нужно уточнить тип
+let nothing: null = null;
+let nothing1: undefined = undefined;
 
 // bult-in objects
 let now: Date = new Date();
